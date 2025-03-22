@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="assets/img/icon.png">
     <link rel="stylesheet" href="assets/css/style001.css">
     <link rel="stylesheet" href="assets/css/style002.css">
+    <link rel="stylesheet" href="assets/css/style003.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -21,10 +22,13 @@
     <nav class="navbar" id="navbar">
       <ul>
         <li><a href="#">Beranda</a></li>
+        <li><a href="#jadwal">Waktu</a></li>
+        <li><a href="#cuaca">Cuaca</a></li>
         <li><a href="#qori">Qori - Al Yasser Sadori</a></li>
         <li><a href="#quran">Bacaan Qur'an Online</a></li>
         <li><a href="#hadist">Bacaan Hadist</a></li>
         <li><a href="#kitab">Bacaan Kitab</a></li>
+        <li><a href="#doa">Kumpulan Do'a</a></li>
         <li><a href="#streaming">Live Streaming</a></li>
         <li><a href="#tilawah">Tilawah</a></li>
       </ul>
@@ -46,12 +50,14 @@
           <i class="fas fa-location"></i>
           : Indramayu - Jawa Barat - Indonesia<br>
           <i class="fas fa-phone"></i>
-          : <a href="https://wa.me/message/UYPM2Q2UEML2C1">+6285135530429</a>
+          : <a href="https://wa.me/message/UYPM2Q2UEML2C1">+6285135530429</a><br>
+          <i class="fas fa-mosque"></i>
+          : Sekitar Indramayu..
           </h2>
           <div class="grid-container" id="bacaan-container"></div>
         </section>
 
-<section id="jadwal" class="section">
+      <section id="jadwal" class="section">
     <h2><i class="fas fa-calendar"></i> Jadwal Sholat</h2>
     <div class="prayer-schedule-container">
         <div class="schedule-box" id="schedule">
@@ -62,7 +68,16 @@
             <p id="hijri-date"></p>
         </div>
     </div>
-</section>
+    </section>
+
+    <div>
+    <section id="weather" class="section">
+    <h2><i class="fas fa-cloud-sun"></i> Cuaca Indramayu</h2>
+    <div class="grid-container" id="weather-container">
+      <script src="assets/js/script003.js"></script>
+    </div>
+  </section>
+    </div>
 
         <section id="qori" class="section">
           <h2><i class="fas fa-microphone-alt"></i> Qori - Al Yasser Sadori</h2>
@@ -83,6 +98,11 @@
 
         <section id="kitab" class="section">
             <h2><i class="fas fa-book"></i> Kitab</h2>
+            <div class="grid-container" id="bacaan-container"></div>
+        </section>
+
+        <section id="doa" class="section">
+            <h2><i class="fas fa-book"></i> Kumpulan Do'a</h2>
             <div class="grid-container" id="bacaan-container"></div>
         </section>
 
