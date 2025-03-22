@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Islamic Indramayu - Pusat Kajian Islam Indramayu</title>
     <link rel="stylesheet" href="assets/css/style001.css">
+    <link rel="stylesheet" href="assets/css/style002.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Islamic Indramayu</h1>
-            <p>
-              Mari kita menuju jalan yang benar.
-            </p>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="./root/qori/index.html">Qori - Al Yasser Sadori</a></li>
-                    <li><a href="https://quranweb.id">Bacaan Qur'an Online</a></li>
-                    <li><a href="#streaming">Live Streaming</a></li>
-                    <li><a href="#tilawah">Tilawah</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="header">
+  <div class="container">
+    <h1 class="logo">Islamic Indramayu</h1>
+    <p>Mari kita menuju jalan yang benar.</p>
+    <button class="navbar-toggle" id="navbarToggle">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="./root/qori/index.html">Qori - Al Yasser Sadori</a></li>
+        <li><a href="https://quranweb.id">Bacaan Qur'an Online</a></li>
+        <li><a href="#streaming">Live Streaming</a></li>
+        <li><a href="#tilawah">Tilawah</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
     <main class="container">
         <section id="home" class="hero">
@@ -46,10 +48,18 @@
           <div class="grid-container" id="bacaan-container"></div>
         </section>
 
-        <section id="jadwal" class="section">
-            <h2><i class="fas fa-calendar"></i> Jadwal Sholat & Azan</h2>
-            <div class="grid-container" id="tilawah-container"></div>
-        </section>
+<section id="jadwal" class="section">
+    <h2><i class="fas fa-calendar"></i> Jadwal Sholat</h2>
+    <div class="prayer-schedule-container">
+        <div class="schedule-box" id="schedule">
+          <script src="assets/js/script002.js"></script>
+        </div>
+        <div class="update-info">
+            <p id="last-update"></p>
+            <p id="hijri-date"></p>
+        </div>
+    </div>
+</section>
 
         <section id="qori" class="section">
           <h2><i class="fas fa-microphone-alt"></i> Qori - Al Yasser Sadori</h2>
@@ -96,6 +106,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script001.js"></script>
 </body>
 </html>
