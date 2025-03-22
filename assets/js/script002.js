@@ -68,7 +68,7 @@
     const scheduleBox = document.getElementById('schedule');
     if (scheduleBox) {
       scheduleBox.innerHTML = `
-        <h2>Waktu Sholat Wajib</h2>
+        <h2>Waktu Wajib</h2>
         ${mandatoryPrayers.map(prayer => {
           const preWindow = addMinutes(prayer.time, -10);
           const postWindow = addMinutes(prayer.time, 10);
