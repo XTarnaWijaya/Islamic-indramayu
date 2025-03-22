@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background: linear-gradient(to right, #0daedfa5, #1eb5e7a5);
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.surah {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid lightblue;
+  margin: 5px;
+  border-radius: 5px;
+  background: #1eb5e7a5;
+}
+
+.surah:hover {
+  background: #0daedfa5;
+}
+
+.ayah {
+  padding: 10px;
+  background: #b5f0ff;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  direction: rtl;
+}
+
+.hidden {
+  display: none;
+}
+
+.pagination {
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  background: rgba(0, 191, 255, 0.498);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  display: none;
+}
+
+.arabic {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 22px;
+  direction: rtl;
+  text-align: right;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  background: rgba(135, 206, 250, 0.139);
+}
+
+.arabic strong {
+  color: #16a085;
+  font-size: 20px;
+}
+
+.translation {
+  font-size: 16px;
+  color: rgb(4, 170, 225);
+  text-align: left;
+  direction: ltr;
+  margin-bottom: 10px;
+}
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#backToTopBtn:hover {
+  background-color: #0056b3;
+}
