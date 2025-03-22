@@ -1,0 +1,15 @@
+{
+  "name": "quran-verses",
+  "version": "1.0.0",
+  "description": "A Site where you can view Quran verses Surah-wise.",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "TarnaWijaya",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
