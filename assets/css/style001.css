@@ -128,7 +128,7 @@ body {
 }
 
 .hero {
-  background: url('https://picsum.photos/1200/400?grayscale') center/cover;
+  background: url('img/sc/main.js') center/cover;
   color: white;
   text-align: center;
   padding: 4rem 0;
