@@ -1,7 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navbarToggle = document.getElementById('navbarToggle');
-    const navbar = document.getElementById('navbar');
+    // Navbar Toggle
+    const navbarToggle = document.querySelector('.navbar-toggle'); 
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar a'); 
 
+    // Toggle menu ketika tombol di klik
+    navbarToggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+
+    // Tutup menu secara otomatis ketika salah satu link diklik
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbar.classList.contains('active')) {
+                navbar.classList.remove('active');
+            }
+        });
+    });
+
+    // Load Bacaan
     const loadBacaan = async () => {
         try {
             const response = await fetch('assets/data/bacaan.json');
@@ -18,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Load Streaming
     const loadStreaming = async () => {
         try {
             const response = await fetch('assets/data/streaming.json');
@@ -34,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Load Tilawah
     const loadTilawah = async () => {
         try {
             const response = await fetch('assets/data/tilawah.json');
@@ -50,17 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    navbarToggle.addEventListener('click', () => {
-        navbar.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!navbar.contains(e.target) && !navbarToggle.contains(e.target)) {
-            navbar.classList.remove('active');
-        }
-    });
-
     loadBacaan();
     loadStreaming();
     loadTilawah();
-})();
+});
