@@ -1,0 +1,33 @@
+#clock {
+  font-size: 4em;
+  color: #ffdd00;
+  padding: 30px 40px;
+  border: 3px solid #ffdd00;
+  border-radius: 15px;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.fade {
+  animation: elasticFade 0.7s ease-out;
+}
+
+@keyframes elasticFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: brightness(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: brightness(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}

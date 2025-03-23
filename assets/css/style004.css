@@ -1,0 +1,45 @@
+.calendar {      
+  display: inline-block;      
+  margin: 20px;      
+  vertical-align: top;      
+}      
+      
+table {      
+  border-collapse: collapse;      
+  margin: 0 auto;      
+}      
+      
+th, td {      
+  border: 1px solid #ccc;      
+  padding: 5px;      
+  width: 30px;      
+  height: 30px;      
+  font-size: 0.9em;      
+  animation: glow 1.5s infinite alternate;      
+}      
+      
+@keyframes glow {      
+  from {      
+    box-shadow: 0 0 5px #90ee90;      
+  }      
+  to {      
+    box-shadow: 0 0 20px #73D0DD;      
+  }      
+}      
+      
+th {      
+  background: #73D0DD;      
+}      
+
+.today-header {
+  background: #98fb98;
+}
+
+.today {
+  background: #98fb98;
+  animation: glow 1.5s infinite alternate;
+}
+
+h3 {      
+  margin-bottom: 5px;      
+}
