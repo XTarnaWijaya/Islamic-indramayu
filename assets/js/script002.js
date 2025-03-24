@@ -15,7 +15,7 @@
   }  
     
   function addMinutes(date, minutes) {  
-    return new Date(date.getTime() + minutes * 30000);  
+    return new Date(date.getTime() + minutes * 60000);  
   }  
     
   async function updateSchedule() {  
@@ -23,6 +23,7 @@
     if (!prayerData) return;  
     const timings = prayerData.timings;  
     const now = new Date();  
+    const sahurTime = parseTime("02:30", now);
       
     const imsakTime = addMinutes(parseTime(timings.Fajr, now), -10);  
     const subuhTime = parseTime(timings.Fajr, now);  
@@ -32,8 +33,10 @@
     const maghribTime = parseTime(timings.Maghrib, now);  
     const terbenamTime = addMinutes(maghribTime, -5);  
     const isyaTime = parseTime(timings.Isha, now);  
+    const istirahatTime = addMinutes(isyaTime, 15);  
       
-    const mandatoryPrayers = [  
+    const mandatoryPrayers = [
+      { name: 'Sahur', time: sahurTime }, 
       { name: 'Imsak', time: imsakTime },  
       { name: 'Subuh', time: subuhTime },  
       { name: 'Terbit', time: terbitTime },  
@@ -41,7 +44,8 @@
       { name: 'Ashar', time: asharTime },  
       { name: 'Terbenam', time: terbenamTime },  
       { name: 'Maghrib', time: maghribTime },  
-      { name: 'Isya', time: isyaTime }  
+      { name: 'Isya', time: isyaTime },
+      { name: 'Istirahat | Tidur', time: istirahatTime }
     ];  
       
     const dhuhaStart = addMinutes(terbitTime, 30);  

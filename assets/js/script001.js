@@ -1,15 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar Toggle
     const navbarToggle = document.querySelector('.navbar-toggle'); 
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.navbar a'); 
-
-    // Toggle menu ketika tombol di klik
     navbarToggle.addEventListener('click', () => {
         navbar.classList.toggle('active');
     });
-
-    // Tutup menu secara otomatis ketika salah satu link diklik
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (navbar.classList.contains('active')) {
@@ -17,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Load Bacaan
     const loadBacaan = async () => {
         try {
             const response = await fetch('assets/data/bacaan.json');
@@ -34,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error loading bacaan:', error);
         }
     };
-
-    // Load Streaming
     const loadStreaming = async () => {
         try {
             const response = await fetch('assets/data/streaming.json');
@@ -51,8 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error loading streaming:', error);
         }
     };
-
-    // Load Tilawah
     const loadTilawah = async () => {
         try {
             const response = await fetch('assets/data/tilawah.json');
