@@ -1,11 +1,9 @@
 .word {
   font-size: 2rem;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 15px 30px;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: #333;
+  border: 2px solid #333;
+  padding: 10px 20px;
+  border-radius: 5px;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -18,9 +16,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.word {
-  animation: fadeIn 1s ease;
-  animation-fill-mode: forwards;
 }
