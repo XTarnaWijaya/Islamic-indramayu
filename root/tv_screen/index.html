@@ -35,8 +35,8 @@
           </div>
           
           <div class="mt-4 flex items-center justify-between px-2">
-            <h2 id="channel-name" class="text-emerald-400 font-bold text-xl">Metro TV</h2>
-            <span id="channel-number" class="text-gray-400">CH 1</span>
+            <h2 id="channel-name" class="text-emerald-400 font-bold text-xl">Televisi</h2>
+            <span id="channel-number" class="text-gray-400">Channel</span>
           </div>
 
           <div class="mt-6 grid grid-cols-3 gap-4 max-w-md mx-auto">
@@ -111,7 +111,7 @@
       currentVideoIndex = index;
       youtubeVideo.src = videos[index];
       channelName.textContent = channels[index].name;
-      channelNumber.textContent = `CH ${channels[index].number}`;
+      channelNumber.textContent = `Channel ${channels[index].number}`;
       document.querySelectorAll('.channel-item').forEach(item => item.classList.remove('bg-emerald-500/20'));
       document.querySelectorAll('.channel-item')[index].classList.add('bg-emerald-500/20');
       showToast(`Switched to ${channels[index].name}`);
