@@ -27,7 +27,7 @@ async function KataKata() {
     }
 
     showRandomWord();
-    setInterval(showRandomWord, 10000);
+    setInterval(showRandomWord, 15000);
 
   } catch (error) {
     console.error("Gagal memuat kata-kata:", error);
