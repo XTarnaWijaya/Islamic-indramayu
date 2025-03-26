@@ -32,6 +32,8 @@ body {
   position: relative;
 }
 
+.search-container { text-align: center; margin-top: 10px; } #searchInput { width: 80%; max-width: 400px; padding: 8px; border-radius: 4px; }
+
 .logo {
   font-size: 2rem;
   font-weight: bold;
@@ -166,8 +168,13 @@ body {
 .footer {
   background: var(--primary-color);
   color: white;
-  padding: 2rem 0;
-  margin-top: 3rem;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px;
+  min-height: 100px;
 }
 
 .social-media {

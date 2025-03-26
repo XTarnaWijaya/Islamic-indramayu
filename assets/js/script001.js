@@ -57,6 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error loading tilawah:', error);
         }
     };
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keyup', function () {
+      const filter = searchInput.value.toLowerCase();
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.style.display = section.innerText.toLowerCase().includes(filter) ? "" : "none";
+      });
+    });
 
     loadBacaan();
     loadStreaming();
