@@ -183,10 +183,15 @@
     <div class="scroll-top" id="scrollTop">↑</div>
 
     <script>
-        // Data foto contoh
         const photos = [
+            {   id: 1,
+                title: "Request Gambar",
+                date: "Tidak Terbatas",
+                desc: "Jika ingin upload sendiri atau tanya dilapor masalah",
+                category: ""
+            },
             {
-                id: 1,
+                id: 2,
                 title: "Masjid islamic center",
                 date: "~",
                 desc: "Masjid Teridah diindramayu",
@@ -194,21 +199,17 @@
                 img: "img/1.png"
             },
             {
-                id: 2,
-                title: "Reuni Sekolah",
-                date: "15 Februari 2023",
-                desc: "Pertemuan kembali dengan teman-teman sekolah",
-                category: "teman",
+                id: 3,
+                title: "Rumah Tarna",
+                date: "15 Februari 2015",
+                desc: "Foto kenangan rumah TarnaWijaya",
+                category: "foto",
                 img: "img/2.png"
             },
-            // Tambahkan 4 data foto lainnya disini
         ];
-
-        // Fungsi untuk membuat kartu foto
         function createPhotoCards(filter = 'all') {
             const grid = document.getElementById('photoGrid');
             grid.innerHTML = '';
-
             photos.forEach(photo => {
                 if (filter === 'all' || photo.category === filter) {
                     const card = document.createElement('div');
@@ -226,23 +227,18 @@
                 }
             });
         }
-
-        // Fungsi modal
         function openModal(photo) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
             const modalTitle = document.getElementById('modalTitle');
             const modalDate = document.getElementById('modalDate');
             const modalDesc = document.getElementById('modalDesc');
-
             modal.style.display = 'flex';
             modalImg.src = photo.img;
             modalTitle.textContent = photo.title;
             modalDate.textContent = photo.date;
             modalDesc.textContent = photo.desc;
         }
-
-        // Event listeners
         document.querySelectorAll('.filter-btn').forEach(button => {
             button.addEventListener('click', () => {
                 document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
@@ -250,11 +246,9 @@
                 createPhotoCards(button.dataset.filter);
             });
         });
-
         document.querySelector('.modal-close').addEventListener('click', () => {
             document.getElementById('imageModal').style.display = 'none';
         });
-
         window.addEventListener('scroll', () => {
             const scrollTop = document.getElementById('scrollTop');
             if (window.scrollY > 300) {
@@ -263,15 +257,12 @@
                 scrollTop.style.display = 'none';
             }
         });
-
         document.getElementById('scrollTop').addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-
-        // Inisialisasi
         createPhotoCards();
     </script>
 </body>
