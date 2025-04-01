@@ -1,5 +1,29 @@
 {
   "name": "TarnaWijaya",
-  "email": "tarnaindramayuu@gmail.com",
-  "main": "index.html"
+  "version": "1.0.0",
+  "description": "Islamic Indramayu",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": {
+    "name": "TarnaWijaya",
+    "email": "tarnaindramayuu@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XTarnaWijaya/Islamic-indramayu.git"
+  },
+  "keywords": [
+    "Islamic",
+    "Indramayu"
+  ],
+  "bugs": {
+    "url": "https://github.com/XTarnaWijaya/Islamic-indramayu/issues"
+  },
+  "homepage": "https://xtarnawijaya.github.io/Islamic-indramayu/",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
 }
