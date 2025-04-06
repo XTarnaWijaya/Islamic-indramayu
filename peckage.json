@@ -2,7 +2,7 @@
   "name": "TarnaWijaya",
   "version": "1.0.0",
   "description": "Islamic Indramayu",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "http-server"
   },
