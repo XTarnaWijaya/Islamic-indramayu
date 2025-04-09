@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokumentasi API TarzAI</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .container {
+      flex: 1;
+      padding: 20px;
+    }
+    .api-section {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .api-section h2 {
+      color: #333;
+    }
+    code {
+      background-color: #f0f0f0;
+      padding: 5px;
+      border-radius: 4px;
+      font-size: 1.1em;
+      display: block;
+      margin-bottom: 10px;
+      overflow-x: auto;
+    }
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    .endpoint {
+      background-color: #f8f8f8;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Docs API TarzAI</h1>
+  </header>
+
+  <div class="container">
+    <section class="api-section">
+      <h2>TarzAI</h2>
+      <p>TarzAI adalah AI kecil yang dibangun oleh TarnaWijaya. Dengan menggunakan provider Google, ini adalah percobaan kecil.</p>
+    </section>
+
+    <section class="api-section">
+      <h2>APIs</h2>
+      <div class="endpoint">
+        <code><a href="https://aistudio.google.com/app/apikey" target="_blank">/get apikey</a></code>
+      </div>
+      <div class="endpoint">
+        <strong>Contoh CURL:</strong>
+        <pre>
+curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=GEMINI_API_KEY" \
+-H 'Content-Type: application/json' \
+-X POST \
+-d '{
+  "contents": [{
+    "parts":[{"text": "Explain how AI works"}]
+    }]
+   }'
+        </pre>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 TarzAI - Semua Hak Cipta Dilindungi</p>
+  </footer>
+
+</body>
+</html>
