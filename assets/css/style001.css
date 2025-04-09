@@ -245,3 +245,31 @@ body {
   margin-right: 1rem;
   font-size: 1.5rem;
 }
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.floating-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.floating-button img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
