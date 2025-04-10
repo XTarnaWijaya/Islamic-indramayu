@@ -49,7 +49,7 @@ async function sendMessage() {
     loadingMessage.className = "message-container ai-container";
     loadingMessage.innerHTML = `
         <img src="../img/faicon.png" class="profile-img" alt="AI">
-        <div class="message ai">• • •</div>
+        <div class="message ai">TarzAI Mengetik...</div>
     `;
     chatBox.appendChild(loadingMessage);
     chatBox.scrollTop = chatBox.scrollHeight;
