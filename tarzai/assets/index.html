@@ -1,189 +1,32 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <title>TarzAI</title>
-    <link rel="icon" href="assets/pp.png" type="image/png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/pp.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            color: #1e293b;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
-
-        .header {
-            background-color: #0f172a;
-            color: #fff;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .header img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-        }
-
-        .header-right {
-            display: flex;
-            gap: 10px;
-        }
-
-        .header-right button {
-            padding: 10px;
-            background-color: #3b82f6;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .chat-box {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            overflow-y: auto;
-            background-color: #e2e8f0;
-            scroll-behavior: smooth;
-        }
-
-        .message-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .message {
-            padding: 12px 16px;
-            border-radius: 20px;
-            max-width: 70%;
-            word-wrap: break-word;
-            font-size: 15px;
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .message.user {
-            align-self: flex-end;
-            background-color: #3b82f6;
-            color: #fff;
-        }
-
-        .message.ai {
-            align-self: flex-start;
-            background-color: #fff;
-            color: #1e293b;
-        }
-
-        .profile-img {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-        }
-
-        .user-container {
-            flex-direction: row-reverse;
-        }
-
-        .user-container .profile-img {
-            margin-left: 10px;
-        }
-
-        .ai-container .profile-img {
-            margin-right: 10px;
-        }
-
-        .input-container {
-            background-color: #0f172a;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .input-container input {
-            flex: 1;
-            padding: 12px 15px;
-            border: none;
-            border-radius: 20px;
-            font-size: 16px;
-            background-color: #f1f5f9;
-            color: #1e293b;
-        }
-
-        .input-container button {
-            padding: 12px;
-            border: none;
-            background-color: #3b82f6;
-            color: #fff;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .send-btn {
-          background-color: #25D366;
-          color: white;
-          border: none;
-          border-radius: 50%;
-          padding: 15px;
-          font-size: 20px;
-          cursor: pointer;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-          transition: background-color 0.3s;
-        }
-        .send-btn:hover {
-          background-color: #1DA851;
-        }
-    </style>
 </head>
 <body>
     <div class="header">
         <div class="header-left">
-            <img src="https://i.ibb.co/41xKxg4/pp.webp" alt="AI Logo">
+            <img src="https://i.ibb.co/41xKxg4/pp.webp" alt="AI Logo" />
             TarzAI
         </div>
         <div class="header-right">
-          <button onclick="clearChatHistory()">Hapus Semua Pesan</button>
+            <button onclick="clearChatHistory()">Hapus Semua Pesan</button>
             <button onclick="window.location.href='../docs/docs.html';">Docs</button>
         </div>
     </div>
     <div id="chat-box" class="chat-box"></div>
+    <div id="previewArea"></div>
     <div class="input-container">
-      <button onclick="">
-        <i class="fas fa-image"></i>
-      </button>
-        <input type="text" id="user-input" placeholder="Ketik pesan...">
-        <button onclick="sendMessage()">
-            <i class="fas fa-paper-plane"></i>
-        </button>
+        <button onclick="document.getElementById('imageInput').click()"><i class="fas fa-image"></i></button>
+        <input type="file" id="imageInput" accept="image/*" multiple />
+        <input type="text" id="user-input" placeholder="Ketik pesan..." />
+        <button id="sendBtn" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
     </div>
     <script src="main.js"></script>
 </body>
