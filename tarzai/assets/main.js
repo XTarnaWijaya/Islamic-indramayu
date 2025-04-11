@@ -54,8 +54,8 @@ async function sendMessage() {
   const hasImages = uploadedImages.length > 0;
   
   // Set default prompt jika teks kosong
-  if (!text && hasImages) text = "Deskripsikan gambar ini dengan detail dan seram";
-  else if (!text) text = "Ceritakan sesuatu yang menarik";
+  if (!text && hasImages) text = "";
+  else if (!text) text = "Apa itu?";
   
   // Simpan gambar yang akan diproses sebelum mereset uploadedImages
   const imagesForAPI = uploadedImages.slice();
@@ -91,7 +91,7 @@ async function sendMessage() {
   loadingMessage.className = "message-container ai-container";
   loadingMessage.innerHTML = `
     <img src="../img/faicon.png" class="profile-img" alt="AI">
-    <div class="message ai">Mengetik<span class="loading-dots"></span></div>
+    <div class="message ai">TarzAI Mengetik<span class="loading-dots"></span></div>
   `;
   chatBox.appendChild(loadingMessage);
   chatBox.scrollTop = chatBox.scrollHeight;
