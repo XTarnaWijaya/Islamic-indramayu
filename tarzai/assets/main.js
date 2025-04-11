@@ -54,7 +54,7 @@ async function sendMessage() {
   const hasImages = uploadedImages.length > 0;
   
   // Set default prompt jika teks kosong
-  if (!text && hasImages) text = "";
+  if (!text && hasImages) text = "apa ini?";
   else if (!text) text = "Apa itu?";
   
   // Simpan gambar yang akan diproses sebelum mereset uploadedImages
