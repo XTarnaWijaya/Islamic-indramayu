@@ -113,7 +113,7 @@ async function sendMessage() {
     });
     
     const data = await response.json();
-    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Tidak bisa melihat konten";
+    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Server Error";
     
     // Hapus pesan loading dan tampilkan balasan AI
     chatBox.removeChild(loadingMessage);
